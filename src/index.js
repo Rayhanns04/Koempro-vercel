@@ -20,25 +20,31 @@ import SignIn from "pages/Auth/SignIn";
 import SignUp from "pages/Auth/SignUp";
 
 ReactDOM.render(
-  <ThemeProvider theme={theme}>
-    {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-    <CssBaseline />
-    <BrowserRouter>
-      <Switch>
-        <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
-        <Route path="/auth" render={(props) => <AuthLayout {...props} />} />
-        <Route path="/home">
-          <Home />
-        </Route>
-        <Route path="/signin">
-          <SignIn />
-        </Route>
-        <Route path="/signup/intek99">
-          <SignUp />
-        </Route>
-        <Redirect from="/" to="/home" />
-      </Switch>
-    </BrowserRouter>
-  </ThemeProvider>,
-  document.querySelector("#root")
+	<ThemeProvider theme={theme}>
+		{/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+		<CssBaseline />
+		<BrowserRouter>
+			<Switch>
+				<Route
+					path="/admin"
+					render={(props) => <AdminLayout {...props} />}
+				/>
+				<Route
+					path="/auth"
+					render={(props) => <AuthLayout {...props} />}
+				/>
+				<Route path="/home">
+					<Home />
+				</Route>
+				<Route path="/signin">
+					<SignIn />
+				</Route>
+				<Route path="/intek99">
+					<SignUp />
+				</Route>
+				<Redirect from="/" to="/home" />
+			</Switch>
+		</BrowserRouter>
+	</ThemeProvider>,
+	document.querySelector("#root")
 );
